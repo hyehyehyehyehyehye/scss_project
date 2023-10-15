@@ -1,0 +1,139 @@
+.nav {
+  &-checkbox {
+    display: none;
+  }
+  &-button {
+    width: 4.8rem;
+    height: 4.8rem;
+    position: absolute;
+    top: 8rem;
+    right: 12rem;
+    z-index: 2000;
+    cursor: pointer;
+    border-radius: 2px;
+    text-align: center;
+  }
+  &-bg {
+    background: $grey0;
+    width: 4.8rem;
+    height: 4.8rem;
+    position: absolute;
+    top: 8rem;
+    right: 12rem;
+    z-index: 1000;
+    cursor: pointer;
+    border-radius: 2px;
+    text-align: center;
+    transition: all 0.8s;
+  }
+  &-checkbox:checked ~ &-bg {
+    transform: scale(100);
+  }
+  &-icon {
+    position: relative;
+    margin-top: 2.2rem;
+    display: block;
+    &::before {
+      top: -0.6rem;
+    }
+    &::after {
+      width: 1.5rem !important;
+      top: 0.6rem;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      transition: all 0.2s;
+    }
+    &,
+    &::before,
+    &::after {
+      width: 2.4rem;
+      height: 2px;
+      background-color: #333;
+      display: inline-block;
+    }
+  }
+  &-button:hover &-icon::before {
+    top: -1rem;
+  }
+  &-button:hover &-icon::after {
+    top: 1rem;
+  }
+  &-checkbox:checked ~ &-button &-icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &-checkbox:checked ~ &-button &-icon::after {
+    width: 2.4rem !important;
+    top: 0;
+    transform: rotate(-135deg);
+  }
+  &-checkbox:checked ~ &-button &-icon {
+    background-color: transparent;
+  }
+
+  //.nav-body
+  &-checkbox:checked ~ &-body {
+    opacity: 1;
+    left: 0;
+  }
+  &-body {
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1500;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  &-list {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    width: 100%;
+    text-align: center;
+  }
+  &-link {
+    display: inline-block;
+    font: {
+      size: 3rem;
+      weight: 300;
+    }
+    padding: 2rem 10rem;
+    color: $grey500;
+    text: {
+      decoration: none;
+      transform: uppercase;
+    }
+    transition: all 0.6s;
+    background: {
+      image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $light-green 50%
+      );
+      size: 220%;
+    }
+    &:hover {
+      width: 100%;
+      background-position: 100%;
+      transform: translateX(1rem);
+    }
+    p {
+      font-size: $font-size_x-large;
+      font-weight: 500;
+      display: block;
+      padding-bottom: 2rem;
+    }
+    span {
+      font-size: $font-size_medium;
+    }
+  }
+}

@@ -422,11 +422,8 @@ main .banner .banner_item .text_wrap ::before {
   display: inline-block;
   width: 6.4rem;
   height: 6.4rem;
-  background-image: url(../../img/icon/icon_home_arrow.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  background: #1e2d37 url(../img/icon/icon_home_arrow.svg) no-repeat center;
   background-size: 2.4rem;
-  background-color: #1e2d37;
   border-radius: 40rem;
   vertical-align: middle;
 }
@@ -451,7 +448,7 @@ main .program_section h2 a {
   color: #1e2d37;
 }
 main .program_section .program_item_img {
-  background: url(../../img/sm_img/11.jpeg) no-repeat center center/cover;
+  background: url(../img/sm_img/11.jpeg) no-repeat center center/cover;
 }
 main .new_section {
   width: 100%;
@@ -567,7 +564,7 @@ footer .btn::after {
   height: 2.4rem;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-image: url(../../img/icon/icon_btn_public_arrow.svg);
+  background-image: url(../img/icon/icon_btn_public_arrow.svg);
   vertical-align: bottom;
 }
 footer .btn:hover {

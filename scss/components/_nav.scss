@@ -26,6 +26,25 @@
     text-align: center;
     transition: all 0.8s;
   }
+  &-button,
+  &-bg {
+    @include mq("lg") {
+      top: 5.5rem;
+      right: 8rem;
+    }
+    @include mq("lg2") {
+      top: 3.5rem;
+      right: 6rem;
+    }
+    @include mq("md") {
+      top: 2.6rem;
+      right: 4rem;
+    }
+    @include mq("md") {
+      top: 1.6rem;
+      right: 1.6rem;
+    }
+  }
   &-checkbox:checked ~ &-bg {
     transform: scale(100);
   }
@@ -117,7 +136,7 @@
         120deg,
         transparent 0%,
         transparent 50%,
-        $light-green 50%
+        $primary 50%
       );
       size: 220%;
     }
@@ -125,12 +144,13 @@
       width: 100%;
       background-position: 100%;
       transform: translateX(1rem);
+      color: $grey0;
     }
     p {
       font-size: $font-size_x-large;
       font-weight: 500;
       display: block;
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
     }
     span {
       font-size: $font-size_medium;

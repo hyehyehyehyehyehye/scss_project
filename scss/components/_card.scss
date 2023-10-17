@@ -12,9 +12,10 @@
     padding: 8rem;
   }
   @include mq("lg2") {
+    width: calc(100% / 3);
     padding: 6rem;
   }
-  @include mq("mb") {
+  @include mq("md") {
     padding: 4rem;
   }
   @include mq("sm") {
@@ -22,6 +23,8 @@
     border-left: none;
     display: flex;
     align-items: center;
+    width: 100%;
+    position: relative;
   }
 }
 .card:hover {

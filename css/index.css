@@ -22,6 +22,30 @@ a {
   padding-right: 12rem;
   padding-left: 12rem;
 }
+@media screen and (max-width: 1440px) {
+  .container {
+    padding-right: 8rem;
+    padding-left: 8rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-right: 6rem;
+    padding-left: 6rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  .container {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .container {
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+  }
+}
 
 @keyframes moveInLeft {
   0% {
@@ -60,14 +84,20 @@ a {
   line-height: 1.6;
   transition: all 0.3s ease-in-out;
 }
-@media screen and (min-width: 1025px) and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .card {
     padding: 8rem;
   }
 }
-@media screen and (min-width: 811px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .card {
+    width: 33.3333333333%;
     padding: 6rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  .card {
+    padding: 4rem;
   }
 }
 @media screen and (max-width: 640px) {
@@ -76,6 +106,8 @@ a {
     border-left: none;
     display: flex;
     align-items: center;
+    width: 100%;
+    position: relative;
   }
 }
 
@@ -92,7 +124,7 @@ a {
   margin-bottom: 2.4em;
   max-width: 100%;
 }
-@media screen and (min-width: 1025px) and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .card img {
     margin-bottom: 1.6rem;
   }
@@ -111,12 +143,12 @@ a {
   font-size: 2rem;
   margin-bottom: 0.8rem;
 }
-@media screen and (min-width: 1025px) and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .card div .sm_title {
     font-size: 1.6rem;
   }
 }
-@media screen and (min-width: 811px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .card div .sm_title {
     font-size: 1.4rem;
   }
@@ -125,17 +157,17 @@ a {
 .card div .big_title {
   font-size: 2.8rem;
 }
-@media screen and (min-width: 1025px) and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .card div .big_title {
     font-size: 2rem;
   }
 }
-@media screen and (min-width: 811px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .card div .big_title {
     font-size: 1.8rem;
   }
 }
-@media screen and (min-width: 641px) and (max-width: 810px) {
+@media screen and (max-width: 810px) {
   .card div .big_title {
     font-size: 1.6rem;
   }
@@ -153,7 +185,7 @@ a {
   font-size: 1.8rem;
   margin-top: 1.6rem;
 }
-@media screen and (min-width: 1025px) and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .card div .text {
     font-size: 1.4rem;
     margin-top: 0.8rem;
@@ -171,17 +203,17 @@ a {
   justify-content: space-between;
   margin-top: 9.6rem;
 }
-@media screen and (min-width: 1025px) and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .card div.more_wrap {
     margin-top: 8rem;
   }
 }
-@media screen and (min-width: 811px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .card div.more_wrap {
     margin-top: 6rem;
   }
 }
-@media screen and (min-width: 641px) and (max-width: 810px) {
+@media screen and (max-width: 810px) {
   .card div.more_wrap {
     margin-top: 4rem;
   }
@@ -227,6 +259,30 @@ a {
   border-radius: 2px;
   text-align: center;
   transition: all 0.8s;
+}
+@media screen and (max-width: 1440px) {
+  .nav-button, .nav-bg {
+    top: 5.5rem;
+    right: 8rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .nav-button, .nav-bg {
+    top: 3.5rem;
+    right: 6rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  .nav-button, .nav-bg {
+    top: 2.6rem;
+    right: 4rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  .nav-button, .nav-bg {
+    top: 1.6rem;
+    right: 1.6rem;
+  }
 }
 .nav-checkbox:checked ~ .nav-bg {
   transform: scale(100);
@@ -305,19 +361,20 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.6s;
-  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #7bdcb5 50%);
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #f09636 50%);
   background-size: 220%;
 }
 .nav-link:hover {
   width: 100%;
   background-position: 100%;
   transform: translateX(1rem);
+  color: #fff;
 }
 .nav-link p {
   font-size: 42px;
   font-weight: 500;
   display: block;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .nav-link span {
   font-size: 20px;
@@ -327,12 +384,58 @@ header {
   position: relative;
   padding: 8rem 0;
 }
+header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+}
+@media screen and (max-width: 1440px) {
+  header {
+    padding: 6rem 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 4rem 0;
+  }
+}
+@media screen and (max-width: 810px) {
+  header {
+    padding: 3.2rem 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  header {
+    padding: 2.4rem 0;
+    z-index: 100;
+    background-color: #fff;
+  }
+}
 header .container {
   display: flex;
   justify-content: space-between;
 }
 header .container .logo {
   height: 4.8rem;
+}
+@media screen and (max-width: 1440px) {
+  header .container .logo {
+    height: 3.6rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  header .container .logo {
+    height: 3.2rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  header .container .logo {
+    height: 3.6rem;
+  }
 }
 header .container .logo img {
   height: 100%;
@@ -351,6 +454,22 @@ header .lang_btn_wrap .lang {
   border: 1px solid #1e2d37;
   margin-right: 8rem;
   transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 1440px) {
+  header .lang_btn_wrap .lang {
+    font-size: 1.4rem;
+    height: 3.6rem;
+    line-height: calc(3.6rem - 2px);
+    padding: 0 1rem;
+    margin-right: 8rem;
+  }
+}
+@media screen and (max-width: 1440px) {
+  header .lang_btn_wrap .lang {
+    height: 3.2rem;
+    line-height: calc(3.2rem - 2px);
+    margin-right: 6rem;
+  }
 }
 header .lang_btn_wrap .lang:hover {
   background-color: #1e2d37;
@@ -388,6 +507,7 @@ header .popup .btn_close {
 
 main .banner {
   width: 100%;
+  height: 100%;
   display: flex;
 }
 main .banner .banner_item {
@@ -395,11 +515,44 @@ main .banner .banner_item {
 }
 main .banner .banner_item .text_wrap p {
   font-size: 2.8rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #1e2d37;
   margin: 12rem;
   margin-right: 0;
   line-height: 4.8rem;
+}
+@media screen and (max-width: 1440px) {
+  main .banner .banner_item .text_wrap p {
+    font-size: 2rem;
+    margin: 8rem;
+    margin-right: 0;
+    line-height: 3rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .banner .banner_item .text_wrap p {
+    margin: 6rem;
+    margin-right: 0;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  main .banner .banner_item .text_wrap p {
+    margin: 4rem;
+    margin-right: 0;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  main .banner .banner_item .text_wrap p {
+    font-size: 2rem;
+    margin: 11rem 1.6rem 2.4rem;
+    color: #1e2d37;
+    line-height: 3rem;
+    display: none;
+  }
 }
 main .banner .banner_item .text_wrap .title {
   display: block;
@@ -410,6 +563,33 @@ main .banner .banner_item .text_wrap .title {
   transition: padding 0.3s cubic-bezier(0.4, 0, 1, 1);
   margin: 12rem;
   margin-right: 0;
+}
+@media screen and (max-width: 1440px) {
+  main .banner .banner_item .text_wrap .title {
+    margin: 8rem;
+    margin-right: 0;
+    font-size: 3.2rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .banner .banner_item .text_wrap .title {
+    margin: 6rem;
+    margin-right: 0;
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  main .banner .banner_item .text_wrap .title {
+    margin: 4rem;
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  main .banner .banner_item .text_wrap .title {
+    font-size: 2.8rem;
+    color: #1e2d37;
+    margin: 6.5rem 1.6rem 2.4rem;
+  }
 }
 main .banner .banner_item .text_wrap ::before {
   transition: opacity 0.3s ease-in-out;
@@ -427,8 +607,25 @@ main .banner .banner_item .text_wrap ::before {
   border-radius: 40rem;
   vertical-align: middle;
 }
+@media screen and (max-width: 1024px) {
+  main .banner .banner_item .text_wrap ::before {
+    width: 4rem;
+    height: 4rem;
+    background-size: 1.5rem;
+  }
+}
 main .banner .banner_item:hover .text_wrap .title {
   padding-left: 10.4rem;
+}
+@media screen and (max-width: 1024px) {
+  main .banner .banner_item:hover .text_wrap .title {
+    padding-left: 6rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  main .banner .banner_item:hover .text_wrap .title {
+    padding-left: 0rem;
+  }
 }
 main .banner .banner_item:hover .text_wrap .title::before {
   opacity: 1;
@@ -436,19 +633,62 @@ main .banner .banner_item:hover .text_wrap .title::before {
 main .banner .banner_item img {
   width: 100%;
 }
+@media screen and (max-width: 640px) {
+  main .m_banner {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  main .m_banner .banner_item {
+    width: 100%;
+    background: #fff;
+  }
+}
 main .program_section {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 640px) {
+  main .program_section {
+    flex-direction: column;
+  }
+}
 main .program_section h2 {
   font-size: 4.8rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 1440px) {
+  main .program_section h2 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .program_section h2 {
+    font-size: 3.2rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  main .program_section h2 {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  main .program_section h2 {
+    display: none;
+  }
 }
 main .program_section h2 a {
   color: #1e2d37;
 }
 main .program_section .program_item_img {
   background: url(../img/sm_img/11.jpeg) no-repeat center center/cover;
+}
+@media screen and (max-width: 640px) {
+  main .program_section .program_item_img {
+    display: none;
+  }
 }
 main .new_section {
   width: 100%;
@@ -464,25 +704,59 @@ main .new_section .new_list .news_item {
   display: block;
   transition: all 0.3s ease-in-out;
 }
+@media screen and (max-width: 1440px) {
+  main .new_section .new_list .news_item {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  main .new_section .new_list .news_item {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+}
 main .new_section .new_list .news_item .container {
   display: flex;
 }
 main .new_section .new_list .news_item .container .category {
+  width: 8%;
   color: #5b7282;
   margin-right: 4rem;
   align-items: center;
   font-size: 2rem;
+}
+@media screen and (max-width: 1440px) {
+  main .new_section .new_list .news_item .container .category {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  main .new_section .new_list .news_item .container .category {
+    margin-right: 2.4rem;
+  }
 }
 main .new_section .new_list .news_item .container .title {
   align-items: center;
   font-weight: 500;
   font-size: 2rem;
 }
+@media screen and (max-width: 1440px) {
+  main .new_section .new_list .news_item .container .title {
+    font-size: 1.6rem;
+  }
+}
 main .new_section .new_list .news_item .container .date {
   font-size: 1.8rem;
   line-height: 1.57;
   margin-left: auto;
   font-weight: 400;
+}
+@media screen and (max-width: 1440px) {
+  main .new_section .new_list .news_item .container .date {
+    font-size: 1.6rem;
+  }
 }
 main .new_section .new_list .news_item:hover {
   background-color: #f2f5f7;
@@ -499,6 +773,24 @@ main .news_section2 a {
   font-weight: 700;
   padding: 12rem;
 }
+@media screen and (max-width: 1440px) {
+  main .news_section2 a {
+    padding: 8rem;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .news_section2 a {
+    padding: 6rem;
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  main .news_section2 a {
+    padding: 4rem;
+    font-size: 1.6rem;
+  }
+}
 main .news_section2 a img {
   width: 100%;
 }
@@ -512,6 +804,16 @@ main .news_section2 a .title {
   font-size: 2.4rem;
   color: #1e2d37;
   font-weight: 700;
+}
+@media screen and (max-width: 1440px) {
+  main .news_section2 a .title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .news_section2 a .title {
+    font-size: 1.8rem;
+  }
 }
 main .news_section2 a .date {
   display: none;

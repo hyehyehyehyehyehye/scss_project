@@ -22,4 +22,20 @@ a {
 .container {
   padding-right: 12rem;
   padding-left: 12rem;
+  @include mq("lg") {
+    padding-right: 8rem;
+    padding-left: 8rem;
+  }
+  @include mq("lg2") {
+    padding-right: 6rem;
+    padding-left: 6rem;
+  }
+  @include mq("md") {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+  @include mq("sm") {
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+  }
 }

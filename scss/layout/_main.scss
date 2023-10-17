@@ -1,17 +1,43 @@
 main {
   .banner {
     width: 100%;
+    height: 100%;
     display: flex;
     .banner_item {
       width: calc(100% / 3);
       .text_wrap {
         p {
           font-size: 2.8rem;
-          font-weight: 700;
+          font-weight: 600;
           color: $grey500;
           margin: 12rem;
           margin-right: 0;
           line-height: 4.8rem;
+          @include mq("lg") {
+            font-size: 2rem;
+            margin: 8rem;
+            margin-right: 0;
+            line-height: 3rem;
+          }
+          @include mq("lg2") {
+            margin: 6rem;
+            margin-right: 0;
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+          }
+          @include mq("md") {
+            margin: 4rem;
+            margin-right: 0;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+          }
+          @include mq("sm") {
+            font-size: 2rem;
+            margin: 11rem 1.6rem 2.4rem;
+            color: #1e2d37;
+            line-height: 3rem;
+            display: none;
+          }
         }
         .title {
           display: block;
@@ -22,6 +48,25 @@ main {
           transition: padding 0.3s cubic-bezier(0.4, 0, 1, 1);
           margin: 12rem;
           margin-right: 0;
+          @include mq("lg") {
+            margin: 8rem;
+            margin-right: 0;
+            font-size: 3.2rem;
+          }
+          @include mq("lg2") {
+            margin: 6rem;
+            margin-right: 0;
+            font-size: 2.8rem;
+          }
+          @include mq("md") {
+            margin: 4rem;
+            font-size: 2.4rem;
+          }
+          @include mq("sm") {
+            font-size: 2.8rem;
+            color: #1e2d37;
+            margin: 6.5rem 1.6rem 2.4rem;
+          }
         }
         ::before {
           transition: opacity 0.3s ease-in-out;
@@ -39,10 +84,21 @@ main {
           background-size: 2.4rem;
           border-radius: 40rem;
           vertical-align: middle;
+          @include mq("lg2") {
+            width: 4rem;
+            height: 4rem;
+            background-size: 1.5rem;
+          }
         }
       }
       &:hover .text_wrap .title {
         padding-left: 10.4rem;
+        @include mq("lg2") {
+          padding-left: 6rem;
+        }
+        @include mq("sm") {
+          padding-left: 0rem;
+        }
       }
       &:hover .text_wrap .title::before {
         opacity: 1;
@@ -52,18 +108,49 @@ main {
       }
     }
   }
+  @include mq("sm") {
+    .m_banner {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .banner_item {
+        width: 100%;
+        background: #fff;
+      }
+    }
+  }
   .program_section {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    @include mq("sm") {
+      flex-direction: column;
+    }
     h2 {
       font-size: 4.8rem;
+      font-weight: 700;
+      @include mq("lg") {
+        font-size: 4rem;
+      }
+      @include mq("lg2") {
+        font-size: 3.2rem;
+      }
+      @include mq("md") {
+        font-size: 2.8rem;
+      }
+      @include mq("sm") {
+        display: none;
+      }
       a {
         color: $grey500;
       }
     }
     .program_item_img {
       background: url(../img/sm_img/11.jpeg) no-repeat center center/cover;
+      @include mq("sm") {
+        display: none;
+      }
     }
   }
   .new_section {
@@ -79,24 +166,46 @@ main {
         line-height: 1.75;
         display: block;
         transition: all 0.3s ease-in-out;
+        @include mq("lg") {
+          padding-top: 2.4rem;
+          padding-bottom: 2.4rem;
+          font-size: 1.6rem;
+        }
+        @include mq("md") {
+          padding-top: 1.6rem;
+          padding-bottom: 1.6rem;
+        }
         .container {
           display: flex;
           .category {
+            width: 8%;
             color: #5b7282;
             margin-right: 4rem;
             align-items: center;
             font-size: 2rem;
+            @include mq("lg") {
+              font-size: 1.6rem;
+            }
+            @include mq("md") {
+              margin-right: 2.4rem;
+            }
           }
           .title {
             align-items: center;
             font-weight: 500;
             font-size: 2rem;
+            @include mq("lg") {
+              font-size: 1.6rem;
+            }
           }
           .date {
             font-size: 1.8rem;
             line-height: 1.57;
             margin-left: auto;
             font-weight: 400;
+            @include mq("lg") {
+              font-size: 1.6rem;
+            }
           }
         }
         &:hover {
@@ -115,6 +224,18 @@ main {
       line-height: 1.6;
       font-weight: 700;
       padding: 12rem;
+      @include mq("lg") {
+        padding: 8rem;
+        font-size: 2rem;
+      }
+      @include mq("lg2") {
+        padding: 6rem;
+        font-size: 1.8rem;
+      }
+      @include mq("md") {
+        padding: 4rem;
+        font-size: 1.6rem;
+      }
       img {
         width: 100%;
       }
@@ -128,6 +249,12 @@ main {
         font-size: 2.4rem;
         color: $grey500;
         font-weight: 700;
+        @include mq("lg") {
+          font-size: 2rem;
+        }
+        @include mq("lg2") {
+          font-size: 1.8rem;
+        }
       }
       .date {
         display: none;

@@ -3,6 +3,9 @@ main {
     width: 100%;
     height: 100%;
     display: flex;
+    @include mq("sm") {
+      display: none;
+    }
     .banner_item {
       width: calc(100% / 3);
       .text_wrap {
@@ -31,13 +34,6 @@ main {
             font-size: 1.6rem;
             line-height: 2.4rem;
           }
-          @include mq("sm") {
-            font-size: 2rem;
-            margin: 11rem 1.6rem 2.4rem;
-            color: #1e2d37;
-            line-height: 3rem;
-            display: none;
-          }
         }
         .title {
           display: block;
@@ -61,11 +57,6 @@ main {
           @include mq("md") {
             margin: 4rem;
             font-size: 2.4rem;
-          }
-          @include mq("sm") {
-            font-size: 2.8rem;
-            color: #1e2d37;
-            margin: 6.5rem 1.6rem 2.4rem;
           }
         }
         ::before {
@@ -96,9 +87,6 @@ main {
         @include mq("lg2") {
           padding-left: 6rem;
         }
-        @include mq("sm") {
-          padding-left: 0rem;
-        }
       }
       &:hover .text_wrap .title::before {
         opacity: 1;
@@ -108,157 +96,208 @@ main {
       }
     }
   }
-  @include mq("sm") {
-    .m_banner {
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: relative;
-      .banner_item {
-        width: 100%;
-        background: #fff;
-      }
-    }
-  }
-  .program_section {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+
+  .m_banner {
+    display: none !important;
     @include mq("sm") {
-      flex-direction: column;
+      display: block !important;
     }
-    h2 {
-      font-size: 4.8rem;
-      font-weight: 700;
-      @include mq("lg") {
-        font-size: 4rem;
-      }
-      @include mq("lg2") {
-        font-size: 3.2rem;
-      }
-      @include mq("md") {
-        font-size: 2.8rem;
-      }
-      @include mq("sm") {
-        display: none;
-      }
-      a {
-        color: $grey500;
-      }
-    }
-    .program_item_img {
-      background: url(../img/sm_img/11.jpeg) no-repeat center center/cover;
-      @include mq("sm") {
-        display: none;
-      }
-    }
-  }
-  .new_section {
     width: 100%;
-    .new_list {
-      .news_item {
-        padding-top: 3.2rem;
-        padding-bottom: 3.2rem;
-        border-bottom: 1px solid #dce3e8;
-        font-size: 2rem;
-        color: #2a3f4d;
-        font-weight: 600;
-        line-height: 1.75;
-        display: block;
-        transition: all 0.3s ease-in-out;
-        @include mq("lg") {
-          padding-top: 2.4rem;
-          padding-bottom: 2.4rem;
-          font-size: 1.6rem;
-        }
-        @include mq("md") {
-          padding-top: 1.6rem;
-          padding-bottom: 1.6rem;
-        }
-        .container {
-          display: flex;
-          .category {
-            width: 8%;
-            color: #5b7282;
-            margin-right: 4rem;
-            align-items: center;
-            font-size: 2rem;
-            @include mq("lg") {
-              font-size: 1.6rem;
-            }
-            @include mq("md") {
-              margin-right: 2.4rem;
-            }
-          }
-          .title {
-            align-items: center;
-            font-weight: 500;
-            font-size: 2rem;
-            @include mq("lg") {
-              font-size: 1.6rem;
-            }
-          }
-          .date {
-            font-size: 1.8rem;
-            line-height: 1.57;
-            margin-left: auto;
-            font-weight: 400;
-            @include mq("lg") {
-              font-size: 1.6rem;
-            }
-          }
-        }
-        &:hover {
-          background-color: $grey10;
-        }
-      }
-    }
-  }
-  .news_section2 {
-    width: 100%;
+    height: 138vw;
     display: flex;
-    a {
-      display: block;
-      width: calc(100% / 2);
-      font-size: 2.4rem;
-      line-height: 1.6;
-      font-weight: 700;
-      padding: 12rem;
-      @include mq("lg") {
-        padding: 8rem;
-        font-size: 2rem;
+    position: relative;
+    top: -84px;
+    .banner_item {
+      width: 100%;
+      position: absolute;
+      background: $grey0;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      &.active {
+        opacity: 1;
       }
-      @include mq("lg2") {
-        padding: 6rem;
-        font-size: 1.8rem;
+      .text_wrap {
+        p {
+          font-size: 2.8rem;
+          font-weight: 600;
+          color: $grey500;
+          line-height: 4.8rem;
+          font-size: 2rem;
+          margin: 11rem 1.6rem 2.4rem;
+          line-height: 3rem;
+        }
+        .title {
+          display: block;
+          font-weight: 700;
+          color: $grey500;
+          position: relative;
+          transition: padding 0.3s cubic-bezier(0.4, 0, 1, 1);
+          font-size: 2.8rem;
+          color: #1e2d37;
+          margin: 6.5rem 1.6rem 2.4rem;
+        }
       }
-      @include mq("md") {
-        padding: 4rem;
-        font-size: 1.6rem;
-      }
+    }
+
+    .img {
+      width: 100%;
+      height: 64rem;
+      overflow: hidden;
       img {
         width: 100%;
+        background-size: cover;
       }
-      .category {
-        margin-top: $margin24;
-        margin-bottom: $margin8;
-        color: $grey200;
-        line-height: 1.75;
+    }
+    .btn {
+      position: relative;
+      top: 265px;
+      left: 84vw;
+      z-index: 100;
+      display: flex;
+      font-size: 3rem;
+      gap: 4vw;
+    }
+  }
+}
+
+.program_section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  @include mq("sm") {
+    flex-direction: column;
+  }
+  h2 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    @include mq("lg") {
+      font-size: 4rem;
+    }
+    @include mq("lg2") {
+      font-size: 3.2rem;
+    }
+    @include mq("md") {
+      font-size: 2.8rem;
+    }
+    @include mq("sm") {
+      display: none;
+    }
+    a {
+      color: $grey500;
+    }
+  }
+  .program_item_img {
+    background: url(../img/sm_img/11.jpeg) no-repeat center center/cover;
+    @include mq("sm") {
+      display: none;
+    }
+  }
+}
+.new_section {
+  width: 100%;
+  .new_list {
+    .news_item {
+      padding-top: 3.2rem;
+      padding-bottom: 3.2rem;
+      border-bottom: 1px solid #dce3e8;
+      font-size: 2rem;
+      color: #2a3f4d;
+      font-weight: 600;
+      line-height: 1.75;
+      display: block;
+      transition: all 0.3s ease-in-out;
+      @include mq("lg") {
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+        font-size: 1.6rem;
       }
-      .title {
-        font-size: 2.4rem;
-        color: $grey500;
-        font-weight: 700;
-        @include mq("lg") {
+      @include mq("md") {
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+      }
+      .container {
+        display: flex;
+        .category {
+          width: 8%;
+          color: #5b7282;
+          margin-right: 4rem;
+          align-items: center;
           font-size: 2rem;
+          @include mq("lg") {
+            font-size: 1.6rem;
+          }
+          @include mq("md") {
+            margin-right: 2.4rem;
+          }
         }
-        @include mq("lg2") {
+        .title {
+          align-items: center;
+          font-weight: 500;
+          font-size: 2rem;
+          @include mq("lg") {
+            font-size: 1.6rem;
+          }
+        }
+        .date {
           font-size: 1.8rem;
+          line-height: 1.57;
+          margin-left: auto;
+          font-weight: 400;
+          @include mq("lg") {
+            font-size: 1.6rem;
+          }
         }
       }
-      .date {
-        display: none;
+      &:hover {
+        background-color: $grey10;
       }
+    }
+  }
+}
+.news_section2 {
+  width: 100%;
+  display: flex;
+  a {
+    display: block;
+    width: calc(100% / 2);
+    font-size: 2.4rem;
+    line-height: 1.6;
+    font-weight: 700;
+    padding: 12rem;
+    @include mq("lg") {
+      padding: 8rem;
+      font-size: 2rem;
+    }
+    @include mq("lg2") {
+      padding: 6rem;
+      font-size: 1.8rem;
+    }
+    @include mq("md") {
+      padding: 4rem;
+      font-size: 1.6rem;
+    }
+    img {
+      width: 100%;
+    }
+    .category {
+      margin-top: $margin24;
+      margin-bottom: $margin8;
+      color: $grey200;
+      line-height: 1.75;
+    }
+    .title {
+      font-size: 2.4rem;
+      color: $grey500;
+      font-weight: 700;
+      @include mq("lg") {
+        font-size: 2rem;
+      }
+      @include mq("lg2") {
+        font-size: 1.8rem;
+      }
+    }
+    .date {
+      display: none;
     }
   }
 }

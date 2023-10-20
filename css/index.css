@@ -624,6 +624,7 @@ main .m_banner {
   display: flex;
   position: relative;
   top: -84px;
+  overflow: hidden;
 }
 @media screen and (max-width: 640px) {
   main .m_banner {

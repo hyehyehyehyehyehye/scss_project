@@ -42,14 +42,11 @@ $(() => {
 
   function nextSlide() {
     currentIndex++;
-
-    if (currentIndex >= bannerItems.length) {
+    if (currentIndex > bannerItems.length) {
       currentIndex = 0;
 
-      bannerSlider.css("transition", "none");
       showSlide(currentIndex);
       setTimeout(function () {
-        bannerSlider.css("transition", "100%");
         currentIndex++;
       }, 10);
     } else {
@@ -59,20 +56,16 @@ $(() => {
 
   function prevSlide() {
     currentIndex--;
-
     if (currentIndex < -1) {
-      currentIndex = bannerItems.length - 2;
-      bannerSlider.css("transition", "none");
+      currentIndex = bannerItems.length;
       showSlide(currentIndex);
       setTimeout(function () {
-        bannerSlider.css("transition", "");
         currentIndex--;
       }, 10);
     } else {
       showSlide(currentIndex);
     }
   }
-
   showSlide(currentIndex);
 
   $(".prev").click(function () {

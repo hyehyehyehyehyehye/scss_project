@@ -107,6 +107,7 @@ main {
     display: flex;
     position: relative;
     top: -84px;
+    overflow: hidden;
     .banner_item {
       width: 100%;
       position: absolute;
